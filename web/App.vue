@@ -3,27 +3,28 @@
     <transition name="fade" mode="out-in">
       <div v-if="stats" key="stats">
         At this rate<br>
-        <a href="https://github.com/vuejs/vue" 
-          target="_blank" 
-          class="vue"
-          :data-balloon="currentLogo('vue') + ' ' + stats.vue.total + ' stars'"
+        <a href="https://github.com/electron/electron"
+          target="_blank"
+          class="electron"
+          :data-balloon="currentLogo('electron') + ' ' + stats.electron.total + ' stars'"
           data-balloon-pos="up"
         >
-          Vue
+          Electron
         </a>
-        ({{ stats.vue.rate }} stars/day) will take <span class="vue">{{ stats.vue.remainingDays }} days</span>
+        ({{ stats.electron.rate }} stars/day) will take <span class="electron">{{ stats.electron.remainingDays }} days</span>
         <br>
-        <a href="https://github.com/facebook/react"
+        <a href="https://github.com/nwjs/nw.js"
         target="_blank"
-        class="react"
-        :data-balloon="currentLogo('react') + ' ' + stats.react.total + ' stars'"
+        class="nwjs"
+        :data-balloon="currentLogo('nwjs') + ' ' + stats.nwjs.total + ' stars'"
         data-balloon-pos="up"
         >
-        React</a>
-        ({{ stats.react.rate }} stars/day) will take <span class="react">{{ stats.react.remainingDays }} days</span><br>
+        NW.js</a>
+        ({{ stats.nwjs.rate }} stars/day) will take <span class="nwjs">{{ stats.nwjs.remainingDays }} days</span><br>
         To reach <span class="target">100K stars</span> on GitHub.
         <div class="source">
-          - Source: <a target="_blank" href="https://github.com/egoist/react-and-vue">EGOIST</a><br>
+          - Source: <a target="_blank" href="https://github.com/Armaldio/electron-and-nw.js">Armaldio</a><br>
+          - Thanks to <a target="_blank" href="https://github.com/egoist/react-and-vue">EGOIST for the initial work on React vs Vue</a><br>
           - Just for fun.
         </div>
       </div>
@@ -47,7 +48,7 @@ export default {
   },
   computed: {
     currentWinner() {
-      return this.stats.vue.total > this.stats.react.total ? "vue" : "react"
+      return this.stats.electron.total > this.stats.nwjs.total ? "electron" : "nwjs"
     }
   },
   methods: {
@@ -86,15 +87,15 @@ a {
   font-size: 4rem;
 }
 
-.vue {
+.electron {
   color: #4fc08d;
 }
 
-.react {
+.nwjs {
   color: #61dafb;
 }
 
-a.vue,a.react {
+a.electron,a.nwjs {
   text-decoration: none;
 }
 

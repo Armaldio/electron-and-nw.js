@@ -11,7 +11,7 @@ const checkTotal = (data, type) => {
 
 const main = async () => {
   process.stdout.write('> Fetching data, please wait...')
-  const { vue, react } = await getStats()
+  const { electron, nwjs } = await getStats()
   process.stdout.clearLine()
   process.stdout.cursorTo(0)
   console.log(
@@ -20,20 +20,20 @@ const main = async () => {
     )
   )
 
-  checkTotal(vue, 'Vue')
-  checkTotal(react, 'React')
+  checkTotal(electron, 'Vue')
+  checkTotal(nwjs, 'React')
 
   console.log(
     `${chalk.bold(`- At this rate:`)}\n${chalk.green(
-      `Vue (${vue.rate} stars/day)`
-    )} will take ${chalk.green(vue.remainingDays)} days\n${chalk.blue(
-      `React (${react.rate} stars/day)`
+      `Vue (${electron.rate} stars/day)`
+    )} will take ${chalk.green(electron.remainingDays)} days\n${chalk.blue(
+      `React (${nwjs.rate} stars/day)`
     )} will take ${chalk.blue(
-      react.remainingDays
+      nwjs.remainingDays
     )} days\nto reach ${chalk.yellow(`100K stars`)} on GitHub.\n`
   )
   console.log(
-    'source: ' + chalk.dim.underline('https://github.com/egoist/react-and-vue')
+    'source: ' + chalk.dim.underline('https://github.com/Armaldio/electron-and-nw.js')
   )
 }
 
