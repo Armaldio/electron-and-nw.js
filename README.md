@@ -1,9 +1,9 @@
-# react-and-vue
+# electron-and-nw.js
 
-Don't take this toy serious my fellow React and Vue folks.
+Don't take this toy serious my fellow Electron and NW.js folks.
 
 ```bash
-npx react-and-vue
+npx electron-and-nw.js
 ```
 
 ## License
