@@ -23,7 +23,7 @@
     "chalk": "^2.4.1"
   },
   "devDependencies": {
-    "poi": "^10.2.3",
+    "poi": "^12.5.5",
     "typeface-source-sans-pro": "^0.0.54"
   },
   "poi": {
